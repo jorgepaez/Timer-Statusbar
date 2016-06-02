@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="RootViewController" customModule="Statusbar_View_App" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="y0b-Ah-2ab" id="DnW-Zd-Ddo"/>
+                <outlet property="hoursTextfield" destination="qgO-qi-YVv" id="vZC-oM-OaD"/>
+                <outlet property="minutesTextfield" destination="q8X-We-4PH" id="MuK-sS-9Zf"/>
+                <outlet property="startPauseButton" destination="Tix-7i-1T9" id="1Q7-Ed-xxA"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y0b-Ah-2ab">
+                    <rect key="frame" x="20" y="10" width="70" height="17"/>
+                    <buttonCell key="cell" type="inline" title="Cancel" bezelStyle="inline" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="P3b-Jh-vlW">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tix-7i-1T9">
+                    <rect key="frame" x="110" y="10" width="70" height="17"/>
+                    <buttonCell key="cell" type="inline" title="Start" bezelStyle="inline" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2uJ-Y7-x2n">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yTi-ji-KaD">
+                    <rect key="frame" x="157" y="57" width="23" height="19"/>
+                    <buttonCell key="cell" type="recessed" title="+" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nBe-Uf-eHn">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="systemBold" size="12"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQ9-I4-ZGz">
+                    <rect key="frame" x="157" y="38" width="23" height="19"/>
+                    <buttonCell key="cell" type="recessed" title="-" bezelStyle="recessed" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Pf1-2l-AqE">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="systemBold" size="12"/>
+                    </buttonCell>
+                </button>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qgO-qi-YVv">
+                    <rect key="frame" x="42" y="54" width="27" height="22"/>
+                    <gestureRecognizers>
+                        <clickGestureRecognizer delaysPrimaryMouseButtonEvents="YES" numberOfClicksRequired="1" id="RPn-Cm-dZE">
+                            <connections>
+                                <action selector="clickedOnControlAction:" target="-2" id="bAC-Gk-Gk7"/>
+                            </connections>
+                        </clickGestureRecognizer>
+                    </gestureRecognizers>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="center" title="12" id="WvX-Yo-0cs">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" red="0.98421052631578942" green="1" blue="0.96842105263157896" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8X-We-4PH">
+                    <rect key="frame" x="108" y="54" width="27" height="22"/>
+                    <gestureRecognizers>
+                        <clickGestureRecognizer delaysPrimaryMouseButtonEvents="YES" numberOfClicksRequired="1" id="1F5-Hc-CIm">
+                            <connections>
+                                <action selector="clickedOnControlAction:" target="-2" id="FB5-RB-4BO"/>
+                            </connections>
+                        </clickGestureRecognizer>
+                    </gestureRecognizers>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" allowsUndo="NO" sendsActionOnEndEditing="YES" state="on" alignment="center" title="45" id="lLV-UJ-a0e">
+                        <font key="font" metaFont="system" size="18"/>
+                        <color key="textColor" red="0.98421052630000005" green="1" blue="0.9684210526" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="qgO-qi-YVv" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="44" id="SO8-w4-laz"/>
+                <constraint firstItem="qgO-qi-YVv" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="14" id="kCJ-m9-Ffs"/>
+            </constraints>
+            <point key="canvasLocation" x="-52" y="-92"/>
+        </customView>
+    </objects>
+</document>
